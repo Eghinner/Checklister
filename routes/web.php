@@ -20,3 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Grupo de Rutas con autorizacion simple
+Route::group(['middleware'=>'auth'],function(){
+// Grupo de Rutas con autorizacion compleja(Admin)
+	Route::name('admin.')->prefix('admin')->middleware('is_admin')->group(function(){
+		Route::resource('pages', \App\Http\Controllers\Admin\PageController::class);
+	});
+
+});
