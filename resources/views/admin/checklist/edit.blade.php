@@ -46,24 +46,7 @@
                 <div class="card">
                     <div class="card-header"><i class="fa fa-align-justify"></i>{{__('List of Tasks')}}</div>
                     <div class="card-body">
-                        <table class="table table-responsive-sm">
-                            <tbody>
-                            @foreach($checklist->tasks as $task)
-                                <tr>
-                                    <td>{{$task->name}}</td>
-                                    <td>
-                                        <a class="btn btn-sm btn-primary" href="{{ route('admin.checklists.tasks.edit', [$checklist, $task]) }}">{{__('Edit')}}</a>
-                                        <form style="display: inline-block;" action="{{ route('admin.checklists.tasks.destroy', [$checklist, $task]) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                           <button class="btn btn-sm btn-danger" type="submit"
-                                           onclick="return confirm('{{__('Are You sure?')}}')">{{__('Delete')}}</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                        @livewire('tasks-table', ['checklist' => $checklist])
                     </div>
                 </div>
 
@@ -89,7 +72,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">{{__('Description')}}</label>
-                                <textarea class="form-control" name="description" id="description" rows="5">{{old('description')}}</textarea>
+                                <textarea class="form-control" name="description" id="task-textarea" rows="5">{{old('description')}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -103,4 +86,13 @@
         </div>
     </div>
 </div>
+@endsection
+@section('scripts')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#task-textarea' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
 @endsection
