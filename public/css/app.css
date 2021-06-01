@@ -1,3 +1,9 @@
+.rota{
+  transition-duration: 0.7s;
+  transform: rotate(180deg);
+}
+
+
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
 /*!
