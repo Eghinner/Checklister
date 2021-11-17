@@ -1,6 +1,13 @@
 @extends('layouts.auth')
 
 @section('content')
+{{--  <style>
+   img, svg {
+       height: 20px;
+       max-width: 100%;
+       width: 20px;
+    }
+</style> --}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
