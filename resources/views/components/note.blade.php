@@ -1,7 +1,7 @@
 <div >
 	<div
 	style="
-	font-size: 20px;
+	/*font-size: 20px;*/
 	z-index: 2;
 	right: 0;
 	transform: rotate(20deg);
