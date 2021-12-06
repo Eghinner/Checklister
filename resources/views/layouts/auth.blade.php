@@ -7,8 +7,13 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="{{asset('/favicon-16x16.png')}}">
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
+	{{-- Font Family  --}}
+	<link href="http://fonts.googleapis.com/css?
+	family=Reenie+Beanie:regular"
+	rel="stylesheet"
+	type="text/css">
 
-	<title>{{ config('app.name', 'Laravel') }}</title>
+	<title>{{ config('app.name', 'Checklister') }}</title>
 
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}" defer></script>

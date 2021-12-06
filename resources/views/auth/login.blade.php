@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center"><x-note/>
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
@@ -58,6 +58,7 @@
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
+
                             </div>
                         </div>
 
@@ -72,6 +73,11 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                <a
+                                    href="{{ route('register') }}"
+                                >
+                                    {{__('New User')}}
+                                </a>
                             </div>
                         </div>
                     </form>
