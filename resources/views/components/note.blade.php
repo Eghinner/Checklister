@@ -18,7 +18,7 @@
 		Pssss... Don't tell Nancy
 	</p>
 	<p class="">
-		User: Admin
+		User: admin@gmail.com
 	</p>
 	<p class="">
 		Password: password
