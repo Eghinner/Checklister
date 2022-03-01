@@ -1,7 +1,6 @@
 <div >
 	<div
 	style="
-	/*font-size: 20px;*/
 	z-index: 2;
 	right: 0;
 	transform: rotate(20deg);
@@ -18,7 +17,7 @@
 		Pssss... Don't tell Nancy
 	</p>
 	<p class="">
-		User: Admin
+		User: admin@gmail.com
 	</p>
 	<p class="">
 		Password: password
